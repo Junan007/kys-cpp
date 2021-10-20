@@ -53,7 +53,9 @@ bool Event::loadEventData()
     {
         std::string str = convert::replaceAllSubString(PotConv::cp950toutf8(talk.data() + offset[i]), "*", "");
         talk_contents_.push_back(str);
+        // printf("talk %d: %s\n", i, str.c_str());
     }
+    
     //读取事件，全部转为整型
     auto kdef = GrpIdxFile::getIdxContent("../game/resource/kdef.idx", "../game/resource/kdef.grp", &offset, &length);
     kdef_.resize(length.size());
@@ -72,6 +74,7 @@ bool Event::loadEventData()
     if (leave_event_id_.size() > 0)
     {
         leave_event_0_ = leave_event_id_[0];
+        printf("leave_event_0: %d\n", leave_event_0_);
         leave_event_id_.erase(leave_event_id_.begin());
     }
     return false;
@@ -310,7 +313,8 @@ void Event::oldTalk(int talk_id, int head_id, int style)
     }
     auto talk_content = talk_contents_[talk_id];
 #ifndef _WIN32 // 非Windows系统（例如Mac和Linux）默认字符集是UTF8，通常对GBK字符集支持不太好，这里转个码，不然显示乱码
-    talk_content = PotConv::cp936toutf8(talk_content);
+    // TODO: 加载时已经做过转码，无再再做转码。
+    // talk_content = PotConv::cp936toutf8(talk_content);
 #endif
     talk->setContent(talk_content);
     fmt::print(talk_contents_[talk_id] + "\n");

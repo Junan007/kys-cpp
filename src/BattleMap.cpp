@@ -20,7 +20,9 @@ BattleMap::BattleMap()
     for (auto& i : battle_infos_)
     {
         PotConv::fromCP950ToCP936(i.Name);
+        // PotConv::fromCP936ToUTF8(i.Name);
         std::string s = i.Name;
+        printf("Name: %s\n", i.Name);
     }
 }
 

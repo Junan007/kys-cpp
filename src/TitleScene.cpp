@@ -59,6 +59,7 @@ void TitleScene::draw()
 void TitleScene::dealEvent(BP_Event& e)
 {
     int r = menu_->run();
+
     if (r == 0)
     {
         Save::getInstance()->load(0);
@@ -104,4 +105,5 @@ void TitleScene::onEntrance()
 {
     Engine::getInstance()->playVideo("../game/movie/1.mp4");
     Audio::getInstance()->playMusic(16);
+    printf("TitleScene::onEntrance() finished.\n");
 }

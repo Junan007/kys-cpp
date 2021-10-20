@@ -18,6 +18,7 @@ BP_Rect Font::getBoxSize(int textLen, int size, int x, int y)
 
 void Font::draw(const std::string& text, int size, int x, int y, BP_Color color, uint8_t alpha)
 {
+    // printf("Font::draw, text:%s,size:%d,x:%d,y:%d\n", text.c_str(), size, x, y);
     int p = 0;
     int char_count = 0;
     int s1;
@@ -27,6 +28,8 @@ void Font::draw(const std::string& text, int size, int x, int y, BP_Color color,
         s1 = getBufferSize();
     }
     auto ss = PotConv::utf8tocp936(text);
+    // printf("cp936:%s.\n", ss.c_str());
+
     while (p < text.size())
     {
         int w = size, h = size;
@@ -56,6 +59,7 @@ void Font::draw(const std::string& text, int size, int x, int y, BP_Color color,
         }
         if (c != 32)
         {
+            // 1像素偏移，生成阴影的效果
             Engine::getInstance()->setColor(tex, { uint8_t(color.r / 2), uint8_t(color.g / 2), uint8_t(color.b / 2), color.a });
             Engine::getInstance()->renderCopy(tex, x1 + 1, y, w1, h);
             Engine::getInstance()->setColor(tex, color);
@@ -71,6 +75,7 @@ void Font::draw(const std::string& text, int size, int x, int y, BP_Color color,
             fmt::print(" %d/%d, %d, total = %d\n", s, char_count, size, getBufferSize());
         }
     }
+    // printf("Font::draw finished.\n");
 }
 
 void Font::drawWithBox(const std::string& text, int size, int x, int y, BP_Color color, uint8_t alpha, uint8_t alpha_box)

@@ -7,6 +7,7 @@
 #include "Random.h"
 #include "TextureManager.h"
 #include "TitleScene.h"
+#include "TestScene.h"
 
 Application::Application()
 {
@@ -19,13 +20,16 @@ Application::~Application()
 int Application::run()
 {
     auto engine = Engine::getInstance();
-    engine->setStartWindowSize(1600, 900);
+    engine->setStartWindowSize(800, 600);    // 1600x900
     engine->init();    //引擎初始化之后才能创建纹理
     engine->createAssistTexture(800, 450);
 
     config();
 
-    auto s = std::make_shared<TitleScene>();    //开始界面
+    // auto s = std::make_shared<TitleScene>();    //开始界面
+    // s->run();
+
+    auto s = std::make_shared<TestScene>();
     s->run();
 
     return 0;

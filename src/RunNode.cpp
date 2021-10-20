@@ -414,7 +414,7 @@ int RunNode::run(bool in_root /*= true*/)
     visible_ = true;
     if (in_root)
     {
-        addIntoDrawTop(shared_from_this());
+        addIntoDrawTop(shared_from_this());  // 将自已放到root中
     }
     onEntrance();
     running_ = true;

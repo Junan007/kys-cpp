@@ -143,9 +143,9 @@ void Save::loadSD(int num)
     std::string filenamed = getFilename(num, 'd');
 
     auto submap_count = submap_infos_.size();
-
     auto sdata = new char[submap_count * sdata_length_];
     auto ddata = new char[submap_count * ddata_length_];
+
     File::readFile(filenames, sdata, submap_count * sdata_length_);
     File::readFile(filenamed, ddata, submap_count * ddata_length_);
     for (int i = 0; i < submap_count; i++)

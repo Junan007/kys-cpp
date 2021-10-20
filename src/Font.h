@@ -13,7 +13,8 @@ private:
 
     int stat_message_ = 0;
 
-    std::map<uint32_t, std::map<int, BP_Texture*>> buffer_;    //缓存画过的字体
+    // TODO: 缓存画过的字符,好像不区分字体，这儿有点问题, 对应为{字符: {字号: 纹理}}
+    std::map<uint32_t, std::map<int, BP_Texture*>> buffer_;    
 
 public:
     static Font* getInstance()

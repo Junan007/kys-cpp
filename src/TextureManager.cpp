@@ -21,6 +21,7 @@ std::string TextureGroup::getFileContent(const std::string& filename)
 
 void TextureGroup::init(const std::string& path, int load_from_path, int load_all)
 {
+    printf("TextureGroup::init, path:%s, %d, %d\n", path.c_str(), load_from_path, load_all);
     //纹理组信息
     if (!inited_)
     {
@@ -47,6 +48,7 @@ void TextureGroup::init(const std::string& path, int load_from_path, int load_al
             (*this)[i] = new Texture();
             (*this)[i]->dx = offset[i * 2];
             (*this)[i]->dy = offset[i * 2 + 1];
+            // printf("texture %d offset: %d, %d\n", i, offset[i * 2], offset[i * 2 + 1]);
         }
         if (zip_.opened())
         {

@@ -166,7 +166,7 @@ Point Scene::getMousePosition(int mouse_x, int mouse_y, int view_x, int view_y)
 {
     int w, h;
     Engine::getInstance()->getWindowSize(w, h);
-    double mouse_x1 = mouse_x * render_center_x_ * 2.0 / w;
+    double mouse_x1 = mouse_x * render_center_x_ * 2.0 / w;   // 映射到游戏地图上的坐标，渲染的尺寸与窗口的尺寸比例。
     double mouse_y1 = mouse_y * render_center_y_ * 2.0 / h;
 
     //mouse_x1 += TILE_W;
