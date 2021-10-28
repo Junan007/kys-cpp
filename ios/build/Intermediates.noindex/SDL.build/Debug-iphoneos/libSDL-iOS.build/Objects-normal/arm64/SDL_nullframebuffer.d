@@ -1,0 +1,32 @@
+dependencies: \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/video/dummy/SDL_nullframebuffer.c \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/video/dummy/../../SDL_internal.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/video/dummy/../../dynapi/SDL_dynapi.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_config.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_platform.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/begin_code.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/close_code.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_config_iphoneos.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/video/dummy/../SDL_sysvideo.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_messagebox.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_stdinc.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_video.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_pixels.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_endian.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_rect.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_error.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_rwops.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_surface.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_blendmode.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_shape.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_thread.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_atomic.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_mutex.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_metal.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/video/dummy/../SDL_vulkan_internal.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/video/dummy/.././khronos/vulkan/vulkan.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/video/dummy/.././khronos/vulkan/vk_platform.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/video/dummy/.././khronos/vulkan/vulkan_core.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/video/dummy/.././khronos/vulkan/vulkan_ios.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_vulkan.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/video/dummy/SDL_nullframebuffer_c.h

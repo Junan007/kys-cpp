@@ -331,7 +331,7 @@ void SubScene::onEntrance()
     }
     //setManViewPosition(submap_info_->EntranceX, submap_info_->EntranceY);
     //RunElement::addOnRootTop(MainScene::getInstance()->getWeather());
-    addChild(MainScene::getInstance()->getWeather());
+    // addChild(MainScene::getInstance()->getWeather());
     //fillEarth();
 
     //一大块地面的纹理

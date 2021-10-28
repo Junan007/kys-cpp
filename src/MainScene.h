@@ -82,7 +82,7 @@ public:
     int view_cloud_ = 0;
     int getViewCloud() { return view_cloud_; }
 
-    void setWeather();
-    std::shared_ptr<ParticleWeather> getWeather() { return weather_; }
-    std::shared_ptr<ParticleWeather> weather_;
+    // void setWeather();
+    // std::shared_ptr<ParticleWeather> getWeather() { return weather_; }
+    // std::shared_ptr<ParticleWeather> weather_;
 };

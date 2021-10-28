@@ -337,7 +337,7 @@ void BattleScene::onEntrance()
     head_self_->setPosition(80, 100);
 
     //RunElement::addOnRootTop(MainScene::getInstance()->getWeather());
-    addChild(MainScene::getInstance()->getWeather());
+    // addChild(MainScene::getInstance()->getWeather());
 
     //earth_texture_ = Engine::getInstance()->createARGBRenderedTexture(COORD_COUNT * TILE_W * 2, COORD_COUNT * TILE_H * 2);
     //Engine::getInstance()->setRenderTarget(earth_texture_);
@@ -695,7 +695,7 @@ int BattleScene::calRolePic(Role* r, int style, int frame)
 
 void BattleScene::calSelectLayer(int x, int y, int team, int mode, int step /*= 0*/)
 {
-    if (mode == 0)
+    if (mode == 0) 
     {
         select_layer_.setAll(-1);
         std::vector<Point> cal_stack;
@@ -1427,7 +1427,7 @@ void BattleScene::useMagicAnimation(Role* r, Magic* m)
     if (r && m)
     {
         Audio::getInstance()->playASound(m->SoundID);    //这里播放音效严格说不正确，不管了
-        actionAnimation(r, m->MagicType, m->EffectID, r->Attack / 20);
+        actionAnimation(r, m->MagicType, m->EffectID);   // , r->Attack / 20);  关闭震屏动画
     }
 }
 
@@ -1486,8 +1486,7 @@ void BattleScene::actionAnimation(Role* r, int style, int effect_id, int shake /
         }
     }
 
-    //int x0, y0;
-    //Engine::getInstance()->getWindowPosition(x0, y0);
+    // 震屏动画
     for (effect_frame_ = -min_dis; effect_frame_ < effect_count + max_dis + 1; effect_frame_++)
     {
         if (exit_)
@@ -1498,11 +1497,10 @@ void BattleScene::actionAnimation(Role* r, int style, int effect_id, int shake /
         {
             x_ = rng_.rand_int(shake) - rng_.rand_int(shake);
             y_ = rng_.rand_int(shake) - rng_.rand_int(shake);
-            //Engine::getInstance()->setWindowPosition(x0 + x_ * 10, y0 + y_ * 10);
         }
         drawAndPresent(animation_delay_);
     }
-    //Engine::getInstance()->setWindowPosition(x0, y0);
+    
     action_frame_ = 0;
     action_type_ = -1;
     effect_frame_ = 0;

@@ -8,11 +8,8 @@
 
 int main(int argc, char* argv[])
 {
-    // Application app;
-    // return app.run();
-
-    // auto e = Event::getInstance();
-    Save::getInstance()->load(1);
+    Application app;
+    return app.run();
 
     return 0;
 }

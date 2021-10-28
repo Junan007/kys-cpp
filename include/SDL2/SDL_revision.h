@@ -1,2 +1,2 @@
-#define SDL_REVISION "https://github.com/scarsty/kys-cpp.git@bd5ddddcfc53780bc7b5078bddcf3679ecf40875"
-#define SDL_REVISION_NUMBER 0
+#define SDL_REVISION "hg-13609:34cc7d3b69d3"
+#define SDL_REVISION_NUMBER 13609

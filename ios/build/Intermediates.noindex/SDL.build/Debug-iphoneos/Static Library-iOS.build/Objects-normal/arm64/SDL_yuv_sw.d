@@ -1,0 +1,20 @@
+dependencies: \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/src/render/SDL_yuv_sw.c \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/src/render/../SDL_internal.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/src/render/../dynapi/SDL_dynapi.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/SDL_config.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/SDL_platform.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/begin_code.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/close_code.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/SDL_assert.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/SDL_log.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/SDL_stdinc.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/src/render/SDL_yuv_sw_c.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/SDL_video.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/SDL_pixels.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/SDL_endian.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/SDL_rect.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/SDL_error.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/SDL_rwops.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/SDL_surface.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.14/include/SDL_blendmode.h

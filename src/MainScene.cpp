@@ -46,11 +46,12 @@ MainScene::MainScene()
         cloud_vector_[i].initRand();
     }
     //getEntrance();
-    weather_ = std::make_shared<ParticleWeather>();
-    weather_->setRenderer(Engine::getInstance()->getRenderer());
-    weather_->setTexture(TextureManager::getInstance()->loadTexture("title", 201)->getTexture());
-    weather_->stopSystem();
-    addChild(weather_);
+    
+    // weather_ = std::make_shared<ParticleWeather>();
+    // weather_->setRenderer(Engine::getInstance()->getRenderer());
+    // weather_->setTexture(TextureManager::getInstance()->loadTexture("title", 201)->getTexture());
+    // weather_->stopSystem();
+    // addChild(weather_);
 }
 
 MainScene::~MainScene()
@@ -209,7 +210,7 @@ void MainScene::backRun()
             view_cloud_++;
         }
     }
-    setWeather();
+    // setWeather();
 }
 
 void MainScene::dealEvent(BP_Event& e)
@@ -492,38 +493,38 @@ void MainScene::forceEnterSubScene(int submap_id, int x, int y, int event)
     setVisible(false);
 }
 
-void MainScene::setWeather()
+/* void MainScene::setWeather()
 {
-    weather_->setPosition(Engine::getInstance()->getWindowWidth() / 2, 0);
-    if (inNorth())
-    {
-        weather_->setStyle(ParticleExample::SNOW);
-        if (!weather_->isActive())
-        {
-            weather_->resetSystem();
-        }
-    }
-    else
-    {
-        if (view_cloud_)
-        {
-            weather_->setStyle(ParticleExample::RAIN);
-            weather_->setEmissionRate(50 * view_cloud_);
-            weather_->setGravity({ 10, 20 });
-            if (!weather_->isActive())
-            {
-                weather_->resetSystem();
-            }
-        }
-        else
-        {
-            if (weather_->isActive())
-            {
-                weather_->stopSystem();
-            }
-        }
-    }
-}
+    // weather_->setPosition(Engine::getInstance()->getWindowWidth() / 2, 0);
+    // if (inNorth())
+    // {
+    //     weather_->setStyle(ParticleExample::SNOW);
+    //     if (!weather_->isActive())
+    //     {
+    //         weather_->resetSystem();
+    //     }
+    // }
+    // else
+    // {
+    //     if (view_cloud_)
+    //     {
+    //         weather_->setStyle(ParticleExample::RAIN);
+    //         weather_->setEmissionRate(50 * view_cloud_);
+    //         weather_->setGravity({ 10, 20 });
+    //         if (!weather_->isActive())
+    //         {
+    //             weather_->resetSystem();
+    //         }
+    //     }
+    //     else
+    //     {
+    //         if (weather_->isActive())
+    //         {
+    //             weather_->stopSystem();
+    //         }
+    //     }
+    // }
+}*/
 
 void MainScene::setEntrance()
 {

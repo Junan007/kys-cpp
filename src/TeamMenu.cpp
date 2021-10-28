@@ -36,7 +36,7 @@ void TeamMenu::onEntrance()
         if (r)
         {
             heads_[i]->setRole(r);
-            if (mode_ == 0 && item_)
+            if (mode_ == 0 && item_)  
             {
                 if (!GameUtil::canUseItem(r, item_))
                 {

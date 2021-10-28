@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/audio/SDL_mixer.c \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/audio/../SDL_internal.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/audio/../dynapi/SDL_dynapi.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_config.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_platform.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/begin_code.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/close_code.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_config_iphoneos.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_cpuinfo.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_stdinc.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_timer.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_error.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_audio.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_endian.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_mutex.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_thread.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_atomic.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/include/SDL_rwops.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/audio/SDL_sysaudio.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/audio/../SDL_dataqueue.h \
+  /Users/junanxia/Desktop/working/kys-cpp/extern/SDL2-2.0.12/src/audio/./SDL_audio_c.h

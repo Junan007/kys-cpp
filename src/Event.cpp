@@ -313,7 +313,7 @@ void Event::oldTalk(int talk_id, int head_id, int style)
     }
     auto talk_content = talk_contents_[talk_id];
 #ifndef _WIN32 // 非Windows系统（例如Mac和Linux）默认字符集是UTF8，通常对GBK字符集支持不太好，这里转个码，不然显示乱码
-    // TODO: 加载时已经做过转码，无再再做转码。
+    // TODO: 加载时已经做过转码，无需再做转码。
     // talk_content = PotConv::cp936toutf8(talk_content);
 #endif
     talk->setContent(talk_content);

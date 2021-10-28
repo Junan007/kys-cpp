@@ -117,32 +117,20 @@ BP_Texture* Engine::createSquareTexture(int size)
 
 BP_Texture* Engine::createTextTexture(const std::string& fontname, const std::string& text, int size, BP_Color c)
 {
-    printf("Engine::createTextTexture: %s, %s, c=(%d,%d,%d,%d), size=%d.\n", fontname.c_str(), text.c_str(), c.r, c.g, c.b, c.a, size);
+    // printf("Engine::createTextTexture: %s, %s, c=(%d,%d,%d,%d), size=%d.\n", fontname.c_str(), text.c_str(), c.r, c.g, c.b, c.a, size);
     TTF_Font* font = TTF_OpenFont(fontname.c_str(), size);
     if (!font)
     {
-        printf("font is null.\n");
+        // printf("font is null.\n");
         return nullptr;
     }
 
-    //SDL_Color c = { 255, 255, 255, 128 };
-    try {
-        printf("000000, ready to render.\n");
-        SDL_Surface* text_s = TTF_RenderUTF8_Blended(font, text.c_str(), c);
-        printf("111111, surface: %x\n", text_s);
-        SDL_Texture* text_t = SDL_CreateTextureFromSurface(renderer_, text_s);
-        printf("2222, texture: %x\n", text_t);
-        
-        SDL_FreeSurface(text_s);
-        TTF_CloseFont(font);
-
-        printf("createTextTexture finished.\n");
-        return text_t;
-    } catch (...)
-    {
-        const char *error = TTF_GetError();
-        printf("Error: %s\n", error);
-    }
+    SDL_Surface* text_s = TTF_RenderUTF8_Blended(font, text.c_str(), c);
+    SDL_Texture* text_t = SDL_CreateTextureFromSurface(renderer_, text_s);
+    
+    SDL_FreeSurface(text_s);
+    TTF_CloseFont(font);
+    return text_t;
     
     return nullptr;
 }

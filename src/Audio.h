@@ -1,6 +1,8 @@
 #pragma once
 #include <vector>
 
+#define USE_SDL_MIXER_AUDIO
+
 #ifndef USE_SDL_MIXER_AUDIO
     #include "bass.h"
     #include "bassmidi.h"
