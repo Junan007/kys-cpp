@@ -1,12 +1,6 @@
-# 金庸老先生千古！
-
 # kys-cpp
 
-<img src='https://raw.githubusercontent.com/scarsty/kys-cpp/master/logo.jpg' />
-
-github：https://github.com/scarsty/kys-cpp
-
-码云（不定期同步）：https://gitee.com/scarsty/kys-cpp
+移植自：https://github.com/scarsty/kys-cpp
 
 资源文件：<http://pan.baidu.com/s/1sl2X9wD>
 
