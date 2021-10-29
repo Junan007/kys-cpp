@@ -1,4 +1,4 @@
-﻿#include "Application.h"
+#include "Application.h"
 #include "Audio.h"
 #include "Engine.h"
 #include "Font.h"
@@ -20,7 +20,7 @@ Application::~Application()
 int Application::run()
 {
     auto engine = Engine::getInstance();
-    engine->setStartWindowSize(800, 600);    // 1600x900
+    engine->setStartWindowSize(568, 320); //(800, 600);    // 1600x900
     engine->init();    //引擎初始化之后才能创建纹理
     engine->createAssistTexture(800, 450);
 

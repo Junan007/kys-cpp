@@ -7,7 +7,7 @@
 // 基本
 void NewSave::SaveCSVBaseInfo(Save::BaseInfo* data, int length, int record)
 {
-    std::ofstream fout("../game/save/csv/" + std::to_string(record) + "_基本.csv");
+    std::ofstream fout("./data/save/csv/" + std::to_string(record) + "_基本.csv");
     fout << "乘船";
     fout << ",";
     fout << "子场景内";
@@ -84,7 +84,7 @@ void NewSave::SaveCSVBaseInfo(Save::BaseInfo* data, int length, int record)
 // 背包
 void NewSave::SaveCSVItemList(ItemList* data, int length, int record)
 {
-    std::ofstream fout("../game/save/csv/" + std::to_string(record) + "_背包.csv");
+    std::ofstream fout("./data/save/csv/" + std::to_string(record) + "_背包.csv");
     fout << "物品编号";
     fout << ",";
     fout << "物品数量";
@@ -100,7 +100,7 @@ void NewSave::SaveCSVItemList(ItemList* data, int length, int record)
 // 人物
 void NewSave::SaveCSVRoleSave(const std::vector<Role>& data, int record)
 {
-    std::ofstream fout("../game/save/csv/" + std::to_string(record) + "_人物.csv");
+    std::ofstream fout("./data/save/csv/" + std::to_string(record) + "_人物.csv");
     fout << "编号";
     fout << ",";
     fout << "头像";
@@ -400,7 +400,7 @@ void NewSave::SaveCSVRoleSave(const std::vector<Role>& data, int record)
 // 物品
 void NewSave::SaveCSVItemSave(const std::vector<Item>& data, int record)
 {
-    std::ofstream fout("../game/save/csv/" + std::to_string(record) + "_物品.csv");
+    std::ofstream fout("./data/save/csv/" + std::to_string(record) + "_物品.csv");
     fout << "编号";
     fout << ",";
     fout << "物品名";
@@ -684,7 +684,7 @@ void NewSave::SaveCSVItemSave(const std::vector<Item>& data, int record)
 // 场景
 void NewSave::SaveCSVSubMapInfoSave(const std::vector<SubMapInfo>& data, int record)
 {
-    std::ofstream fout("../game/save/csv/" + std::to_string(record) + "_场景.csv");
+    std::ofstream fout("./data/save/csv/" + std::to_string(record) + "_场景.csv");
     fout << "编号";
     fout << ",";
     fout << "名称";
@@ -787,7 +787,7 @@ void NewSave::SaveCSVSubMapInfoSave(const std::vector<SubMapInfo>& data, int rec
 // 武功
 void NewSave::SaveCSVMagicSave(const std::vector<Magic>& data, int record)
 {
-    std::ofstream fout("../game/save/csv/" + std::to_string(record) + "_武功.csv");
+    std::ofstream fout("./data/save/csv/" + std::to_string(record) + "_武功.csv");
     fout << "编号";
     fout << ",";
     fout << "名称";
@@ -996,7 +996,7 @@ void NewSave::SaveCSVMagicSave(const std::vector<Magic>& data, int record)
 // 商店
 void NewSave::SaveCSVShopSave(const std::vector<Shop>& data, int record)
 {
-    std::ofstream fout("../game/save/csv/" + std::to_string(record) + "_商店.csv");
+    std::ofstream fout("./data/save/csv/" + std::to_string(record) + "_商店.csv");
     fout << "物品编号1";
     fout << ",";
     fout << "物品编号2";
@@ -1062,7 +1062,7 @@ void NewSave::SaveCSVShopSave(const std::vector<Shop>& data, int record)
 // 基本
 void NewSave::LoadCSVBaseInfo(Save::BaseInfo* data, int length, int record)
 {
-//    io::CSVReader<18, io::trim_chars<>, io::double_quote_escape<',', '\"'>> in("../game/save/csv/" + std::to_string(record) + "_基本.csv");
+//    io::CSVReader<18, io::trim_chars<>, io::double_quote_escape<',', '\"'>> in("./data/save/csv/" + std::to_string(record) + "_基本.csv");
 //    in.read_header(io::ignore_missing_column | io::ignore_extra_column,
 //        "乘船",
 //        "子场景内",
@@ -1137,7 +1137,7 @@ void NewSave::LoadCSVBaseInfo(Save::BaseInfo* data, int length, int record)
 // 背包
 void NewSave::LoadCSVItemList(ItemList* data, int length, int record)
 {
-//    io::CSVReader<2, io::trim_chars<>, io::double_quote_escape<',', '\"'>> in("../game/save/csv/" + std::to_string(record) + "_背包.csv");
+//    io::CSVReader<2, io::trim_chars<>, io::double_quote_escape<',', '\"'>> in("./data/save/csv/" + std::to_string(record) + "_背包.csv");
 //    in.read_header(io::ignore_missing_column | io::ignore_extra_column,
 //        "物品编号",
 //        "物品数量");
@@ -1167,7 +1167,7 @@ void NewSave::LoadCSVItemList(ItemList* data, int length, int record)
 void NewSave::LoadCSVRoleSave(std::vector<Role>& data, int record)
 {
 //    data.clear();
-//    io::CSVReader<83, io::trim_chars<>, io::double_quote_escape<',', '\"'>> in("../game/save/csv/" + std::to_string(record) + "_人物.csv");
+//    io::CSVReader<83, io::trim_chars<>, io::double_quote_escape<',', '\"'>> in("./data/save/csv/" + std::to_string(record) + "_人物.csv");
 //    in.read_header(io::ignore_missing_column | io::ignore_extra_column,
 //        "编号",
 //        "头像",
@@ -1417,7 +1417,7 @@ void NewSave::LoadCSVRoleSave(std::vector<Role>& data, int record)
 void NewSave::LoadCSVItemSave(std::vector<Item>& data, int record)
 {
 //    data.clear();
-//    io::CSVReader<72, io::trim_chars<>, io::double_quote_escape<',', '\"'>> in("../game/save/csv/" + std::to_string(record) + "_物品.csv");
+//    io::CSVReader<72, io::trim_chars<>, io::double_quote_escape<',', '\"'>> in("./data/save/csv/" + std::to_string(record) + "_物品.csv");
 //    in.read_header(io::ignore_missing_column | io::ignore_extra_column,
 //        "编号",
 //        "物品名",
@@ -1649,7 +1649,7 @@ void NewSave::LoadCSVItemSave(std::vector<Item>& data, int record)
 void NewSave::LoadCSVSubMapInfoSave(std::vector<SubMapInfo>& data, int record)
 {
 //    data.clear();
-//    io::CSVReader<22, io::trim_chars<>, io::double_quote_escape<',', '\"'>> in("../game/save/csv/" + std::to_string(record) + "_场景.csv");
+//    io::CSVReader<22, io::trim_chars<>, io::double_quote_escape<',', '\"'>> in("./data/save/csv/" + std::to_string(record) + "_场景.csv");
 //    in.read_header(io::ignore_missing_column | io::ignore_extra_column,
 //        "编号",
 //        "名称",
@@ -1739,7 +1739,7 @@ void NewSave::LoadCSVSubMapInfoSave(std::vector<SubMapInfo>& data, int record)
 void NewSave::LoadCSVMagicSave(std::vector<Magic>& data, int record)
 {
 //    data.clear();
-//    io::CSVReader<64, io::trim_chars<>, io::double_quote_escape<',', '\"'>> in("../game/save/csv/" + std::to_string(record) + "_武功.csv");
+//    io::CSVReader<64, io::trim_chars<>, io::double_quote_escape<',', '\"'>> in("./data/save/csv/" + std::to_string(record) + "_武功.csv");
 //    in.read_header(io::ignore_missing_column | io::ignore_extra_column,
 //        "编号",
 //        "名称",
@@ -1922,7 +1922,7 @@ void NewSave::LoadCSVMagicSave(std::vector<Magic>& data, int record)
 void NewSave::LoadCSVShopSave(std::vector<Shop>& data, int record)
 {
 //    data.clear();
-//    io::CSVReader<15, io::trim_chars<>, io::double_quote_escape<',', '\"'>> in("../game/save/csv/" + std::to_string(record) + "_商店.csv");
+//    io::CSVReader<15, io::trim_chars<>, io::double_quote_escape<',', '\"'>> in("./data/save/csv/" + std::to_string(record) + "_商店.csv");
 //    in.read_header(io::ignore_missing_column | io::ignore_extra_column,
 //        "物品编号1",
 //        "物品编号2",

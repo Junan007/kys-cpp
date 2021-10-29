@@ -14,60 +14,60 @@
 #include <memory>
 #include <functional>
 
-// ÏÈÍµÀÁ·ÅÒ»Æð
+// ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
 namespace BattleMod {
 
 class BattleModifier : public BattleScene {
     
 private:
-    const std::string PATH = "../game/config/battle.yaml";
+    const std::string PATH = "./data/config/battle.yaml";
 
-    // ÑÏ½û¸´ÖÆstring
+    // ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½string
     std::vector<std::string> strPool_;
 
     std::vector<BattleMod::SpecialEffect> effects_;
     std::vector<BattleStatus> battleStatus_;
 
-    // Îä¹¦Ð§¹û£¬²»ÏëÅöMagicÕâ¸öÀà£¬ÐÞ¸ÄµÄ¶«Î÷Ì«¶à
-    // Ö÷¶¯Îä¹¦Ð§¹û£¬±ØÐëÊ¹ÓÃÕâ¸öÎä¹¦²ÅÐÐ
+    // ï¿½ä¹¦Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Magicï¿½ï¿½ï¿½ï¿½à£¬ï¿½Þ¸ÄµÄ¶ï¿½ï¿½ï¿½Ì«ï¿½ï¿½
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ä¹¦Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä¹¦ï¿½ï¿½ï¿½ï¿½
     EffectsTable atkMagic_;
-    // ±»¶¯°¤´òµÄÊ±ºòµÄÐ§¹û
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
     EffectsTable defMagic_;
-    // ¼¯ÆøÌØÐ§
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
     EffectsTable speedMagic_;
-    // »ØºÏ/ÐÐ¶¯ÌØÐ§£¬½öÔÚÐÐ¶¯ºó·¢¶¯£¬»¹ÓÐÒ»¸öÔÚÐÐ¶¯Ç°µÄÂýÂýÌí¼Ó
+    // ï¿½Øºï¿½/ï¿½Ð¶ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ó·¢¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     EffectsTable turnMagic_;
 
-    // ÈËÎï ¹¥»÷ÌØÐ§
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
     EffectsTable atkRole_;
-    // ÈËÎï °¤´òÌØÐ§
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
     EffectsTable defRole_;
-    // ÈËÎï ¼¯ÆøÌØÐ§
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
     EffectsTable speedRole_;
     EffectsTable turnRole_;
 
-    // ËùÓÐÈËÎï¹²Ïí
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¹²ï¿½ï¿½
     Effects atkAll_;
     Effects defAll_;
     Effects speedAll_;
     Effects turnAll_;
 
 
-    // ¹ÜÀíÌØÐ§
-    // ¹¥»÷ÌØÐ§¹ÜÀíÆ÷Ö»ÓÐÒ»¸ö£¬ÔÚ¹¥»÷½áÊøºóÇå¿Õ
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     EffectManager atkEffectManager_;
-    // ·ÀÓùÌØÐ§¹ÜÀíÆ÷Ö»ÓÐÒ»¸ö£¬ÔÚ°¤´ò½áÊøºóÇå¿Õ
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     EffectManager defEffectManager_;
-    // ¼¯ÆøÌØÐ§ ÏÖÔÚÒ²Ö»ÐèÒªÒ»¸öÁË£¡
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ ï¿½ï¿½ï¿½ï¿½Ò²Ö»ï¿½ï¿½ÒªÒ»ï¿½ï¿½ï¿½Ë£ï¿½
     EffectManager speedEffectManager_;
-    // »ØºÏ Ò²Ò»¸ö£¡
+    // ï¿½Øºï¿½ Ò²Ò»ï¿½ï¿½ï¿½ï¿½
     EffectManager turnEffectManager_;
 
     std::unordered_map<int, BattleStatusManager> battleStatusManager_;
 
-    // simulation¶ÔcalMagicHurtºÜ²»ÓÑºÃ
+    // simulationï¿½ï¿½calMagicHurtï¿½Ü²ï¿½ï¿½Ñºï¿½
     bool simulation_ = false;
-    // ¶àÖØ¹¥»÷£¨±ð³Æ Á¬»÷ ×óÓÒ»¥²«£©
+    // ï¿½ï¿½ï¿½Ø¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½
     int multiAtk_ = 0;
 
     void init();
@@ -91,27 +91,27 @@ private:
 
 public:
 
-    // rng ¾ÍÓ¦¸ÃÊÇ¸öÈ«¾Ö±äÁ¿
+    // rng ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ç¸ï¿½È«ï¿½Ö±ï¿½ï¿½ï¿½
     static RandomDouble rng;
 
-    // ÎÒ¾ö¶¨Õâ²»ÊÇÒ»¸ösingleton£¬²»ÓÃÖØ¿ªÓÎÏ·¾Í¿ÉÒÔ²âÊÔ
+    // ï¿½Ò¾ï¿½ï¿½ï¿½ï¿½â²»ï¿½ï¿½Ò»ï¿½ï¿½singletonï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½ï¿½ï¿½Ï·ï¿½Í¿ï¿½ï¿½Ô²ï¿½ï¿½ï¿½
     BattleModifier();
     BattleModifier(int id);
 
     void dealEvent(BP_Event & e) override;
 
 
-    // ÔÝÇÒ¿¼ÂÇÐÞ¸ÄÕâÐ©º¯Êý
+    // ï¿½ï¿½ï¿½Ò¿ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½
     virtual void setRoleInitState(Role* r) override;
 
-    virtual void actUseMagic(Role* r);           //ÎäÑ§
+    virtual void actUseMagic(Role* r);           //ï¿½ï¿½Ñ§
 
     virtual void useMagic(Role* r, Magic* m);
 
     virtual int calMagicHurt(Role* r1, Role* r2, Magic* magic);
-    virtual int calMagiclHurtAllEnemies(Role* r, Magic* m, bool simulation = false);    //¼ÆËãÈ«²¿ÈËÎïµÄÉËº¦
+    virtual int calMagiclHurtAllEnemies(Role* r, Magic* m, bool simulation = false);    //ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½
     // virtual void showNumberAnimation();
-    // Õâ¸öÊÇÐÂ¼ÓµÄ
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼Óµï¿½
     virtual Role* semiRealPickOrTick();
 
     void showMagicNames(const std::vector<std::reference_wrapper<const std::string>>& names);

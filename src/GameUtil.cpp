@@ -5,8 +5,8 @@
 
 GameUtil::GameUtil()
 {
-    loadFile("../game/config/kysmod.ini");
-    auto str = convert::readStringFromFile("../game/list/levelup.txt");
+    loadFile("./data/config/kysmod.ini");
+    auto str = convert::readStringFromFile("./data/list/levelup.txt");
     level_up_list_ = convert::findNumbers<int>(str);
     if (level_up_list_.size() < Role::getMaxValue()->Level)
     {

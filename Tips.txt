@@ -1,0 +1,3 @@
+iPhone8: 568x320
+
+Logo.jpg: 755x297

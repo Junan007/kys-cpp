@@ -27,11 +27,11 @@ MainScene::MainScene()
 
         int length = COORD_COUNT * COORD_COUNT * sizeof(MAP_INT);
 
-        File::readFile("../game/resource/earth.002", &earth_layer1.data(0), length);
-        File::readFile("../game/resource/surface.002", &surface_layer1.data(0), length);
-        File::readFile("../game/resource/building.002", &building_layer1.data(0), length);
-        File::readFile("../game/resource/buildx.002", &build_x_layer_.data(0), length);
-        File::readFile("../game/resource/buildy.002", &build_y_layer_.data(0), length);
+        File::readFile("./data/resource/earth.002", &earth_layer1.data(0), length);
+        File::readFile("./data/resource/surface.002", &surface_layer1.data(0), length);
+        File::readFile("./data/resource/building.002", &building_layer1.data(0), length);
+        File::readFile("./data/resource/buildx.002", &build_x_layer_.data(0), length);
+        File::readFile("./data/resource/buildy.002", &build_y_layer_.data(0), length);
 
         divide2(earth_layer1, earth_layer_);
         divide2(surface_layer1, surface_layer_);

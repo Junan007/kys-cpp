@@ -63,7 +63,7 @@ void TitleScene::dealEvent(BP_Event& e)
     if (r == 0)
     {
         Save::getInstance()->load(0);
-        //Script::getInstance()->runScript("../game/script/0.lua");
+        //Script::getInstance()->runScript("./data/script/0.lua");
         std::string name = "";
         auto input = std::make_shared<InputBox>("請輸入姓名：", 30);
         input->setInputPosition(350, 300);
@@ -91,7 +91,7 @@ void TitleScene::dealEvent(BP_Event& e)
         if (menu_load_->run() >= 0)
         {
             //Save::getInstance()->getRole(0)->MagicLevel[0] = 900;    //测试用
-            //Script::getInstance()->runScript("../game/script/0.lua");
+            //Script::getInstance()->runScript("./data/script/0.lua");
             MainScene::getInstance()->run();
         }
     }
@@ -103,7 +103,7 @@ void TitleScene::dealEvent(BP_Event& e)
 
 void TitleScene::onEntrance()
 {
-    Engine::getInstance()->playVideo("../game/movie/1.mp4");
+    Engine::getInstance()->playVideo("./data/movie/1.mp4");
     Audio::getInstance()->playMusic(16);
     printf("TitleScene::onEntrance() finished.\n");
 }

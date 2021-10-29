@@ -17,7 +17,7 @@ public:
     float x = 0, y = 0;
     Pointf operator*(float f)
     {
-        Pointf p{ x * f, y * f };
+        Pointf p { x * f, y * f };
         return p;
     }
     float getAngle()

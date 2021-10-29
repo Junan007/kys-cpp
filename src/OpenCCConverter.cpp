@@ -3,7 +3,7 @@
 
 OpenCCConverter::OpenCCConverter()
 {
-    cc = opencc_open("../game/cc/s2t.json");
+    cc = opencc_open("./data/cc/s2t.json");
     if (cc == (decltype(cc)) - 1)
     {
         cc = nullptr;

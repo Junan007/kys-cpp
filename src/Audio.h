@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 
-#define USE_SDL_MIXER_AUDIO
+//#define USE_SDL_MIXER_AUDIO
 
 #ifndef USE_SDL_MIXER_AUDIO
     #include "bass.h"
@@ -10,7 +10,7 @@
     using WAV = HSAMPLE;
     using MIDI_FONT = BASS_MIDI_FONT;
 #else
-    #include <SDL2/SDL_mixer.h>
+    #include "SDL2/SDL_mixer.h"
     using MUSIC = Mix_Music*;
     using WAV = Mix_Chunk*;
     using MIDI_FONT = void*;

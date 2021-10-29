@@ -1,5 +1,8 @@
 #pragma once
+extern "C"
+{
 #include "../others/zip.h"
+}
 #include <string>
 #include <vector>
 

@@ -28,7 +28,7 @@ void trans_fight_frame()
 {
     for (int i = 0; i <= 300; i++)
     {
-        std::string path = fmt::format("../game/resource/fight/fight{:03}", i);
+        std::string path = fmt::format("./data/resource/fight/fight{:03}", i);
         std::vector<int16_t> frame;
         std::string filename = path + "/fightframe.ka";
         if (File::fileExist(filename))
@@ -140,23 +140,23 @@ int expandR(std::string idx, std::string grp, bool ranger = true)
 
 int main()
 {
-    trans_bin_list("../game/binlist/levelup.bin", "../game/list/levelup.txt");
-    trans_bin_list("../game/binlist/leave.bin", "../game/list/leave.txt");
+    trans_bin_list("./data/binlist/levelup.bin", "./data/list/levelup.txt");
+    trans_bin_list("./data/binlist/leave.bin", "./data/list/leave.txt");
     trans_fight_frame();
 
-    expandR("../game/save/ranger.idx", "../game/save/ranger.grp");
+    expandR("./data/save/ranger.idx", "./data/save/ranger.grp");
 
     for (int i = 1; i <= 20; i++)
     {
-        std::string grp = "../game/save/r" + std::to_string(i) + ".grp";
-        expandR("../game/save/ranger.idx", grp);
-        grp = "../game/save/s" + std::to_string(i) + ".grp";
-        expandR("../game/save/allsin.idx", grp, false);
-        grp = "../game/save/d" + std::to_string(i) + ".grp";
-        expandR("../game/save/alldef.idx", grp, false);
+        std::string grp = "./data/save/r" + std::to_string(i) + ".grp";
+        expandR("./data/save/ranger.idx", grp);
+        grp = "./data/save/s" + std::to_string(i) + ".grp";
+        expandR("./data/save/allsin.idx", grp, false);
+        grp = "./data/save/d" + std::to_string(i) + ".grp";
+        expandR("./data/save/alldef.idx", grp, false);
     }
-    expandR("../game/resource/kdef.idx", "../game/resource/kdef.grp", false);
-    expandR("../game/resource/warfld.idx", "../game/resource/warfld.grp", false);
+    expandR("./data/resource/kdef.idx", "./data/resource/kdef.grp", false);
+    expandR("./data/resource/warfld.idx", "./data/resource/warfld.grp", false);
 
     return 0;
 }

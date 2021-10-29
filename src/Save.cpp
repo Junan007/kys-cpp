@@ -18,7 +18,7 @@ std::string Save::getFilename(int i, char c)
     std::string filename;
     if (i > 0)
     {
-        filename = fmt::format("../game/save/{}{}.grp", c, i);
+        filename = fmt::format("./data/save/{}{}.grp", c, i);
         if (c == 'r')
         {
             filename += "32";
@@ -28,15 +28,15 @@ std::string Save::getFilename(int i, char c)
     {
         if (c == 'r')
         {
-            filename = "../game/save/ranger.grp32";
+            filename = "./data/save/ranger.grp32";
         }
         else if (c == 's')
         {
-            filename = "../game/save/allsin.grp";
+            filename = "./data/save/allsin.grp";
         }
         else if (c == 'd')
         {
-            filename = "../game/save/alldef.grp";
+            filename = "./data/save/alldef.grp";
         }
     }
     return filename;
@@ -125,7 +125,7 @@ bool Save::load(int num)
 void Save::loadR(int num)
 {
     std::string filenamer = getFilename(num, 'r');
-    std::string filename_idx = "../game/save/ranger.idx32";
+    std::string filename_idx = "./data/save/ranger.idx32";
     auto rgrp = GrpIdxFile::getIdxContent(filename_idx, filenamer, &offset_, &length_);
     memcpy((void*)this, rgrp.data() + offset_[0], length_[0]);
     File::readDataToVector(rgrp.data() + offset_[1], length_[1], roles_mem_, sizeof(RoleSave));
@@ -383,14 +383,14 @@ bool Save::insertAt(const std::string& type, int idx)
 
 void Save::saveRToDB(int num)
 {
-    std::string filename0 = "../game/save/0.db";
+    std::string filename0 = "./data/save/0.db";
     if (!File::fileExist(filename0))
     {
         return;
     }
     sqlite3* db;
     //此处最好复制一个，先搞搞再说
-    std::string filename = "../game/save/" + std::to_string(num) + ".db";
+    std::string filename = "./data/save/" + std::to_string(num) + ".db";
     convert::writeStringToFile(convert::readStringFromFile(filename0), filename);
     sqlite3_open(filename.c_str(), &db);
     sqlite3_exec(db, "BEGIN;", nullptr, nullptr, nullptr);
@@ -408,7 +408,7 @@ void Save::saveRToDB(int num)
 void Save::loadRFromDB(int num)
 {
     NewSave::initDBFieldInfo();
-    auto filename = "../game/save/" + std::to_string(num) + ".db";
+    auto filename = "./data/save/" + std::to_string(num) + ".db";
     if (!File::fileExist(filename))
     {
         return;

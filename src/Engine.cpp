@@ -1,4 +1,4 @@
-﻿#include "Engine.h"
+#include "Engine.h"
 #ifdef _MSC_VER
 #define NOMINMAX
 #include <windows.h>
@@ -158,7 +158,7 @@ int Engine::init(void* handle)
     SDL_EventState(SDL_FINGERMOTION, SDL_DISABLE);
 
     rect_ = { 0, 0, start_w_, start_h_ };
-    logo_ = loadImage("logo.png");
+    logo_ = loadImage("./data/logo.jpg");
     showLogo();
     renderPresent();
     TTF_Init();

@@ -8,8 +8,8 @@ class Font
 private:
     Font();
 
-    std::string fontnamec_ = "../game/font/chinese.ttf";
-    std::string fontnamee_ = "../game/font/english.ttf";
+    std::string fontnamec_ = "./data/font/chinese.ttf";
+    std::string fontnamee_ = "./data/font/english.ttf";
 
     int stat_message_ = 0;
 
