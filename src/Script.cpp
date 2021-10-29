@@ -1,3 +1,5 @@
+#ifdef USE_LUA_SCRIPT
+
 #include "Script.h"
 #include "Event.h"
 #include "EventMacro.h"
@@ -203,3 +205,5 @@ int Script::registerEventFunctions()
 
     return 0;
 }
+
+#endif

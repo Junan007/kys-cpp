@@ -1,3 +1,5 @@
+#ifdef USE_LUA_SCRIPT
+
 #pragma once
 #include "FunctionTrait.h"
 #ifdef _WIN32
@@ -49,3 +51,5 @@ public:
         return 1;
     }
 };
+
+#endif

@@ -74,6 +74,9 @@
 		43D7BFA2272A940B0015D6C9 /* convert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43D7BF97272A940A0015D6C9 /* convert.cpp */; };
 		43D7BFA3272A940B0015D6C9 /* File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43D7BF9A272A940B0015D6C9 /* File.cpp */; };
 		43D7BFA4272A940B0015D6C9 /* Cifa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43D7BF9B272A940B0015D6C9 /* Cifa.cpp */; };
+		43E9C353272BD558002FDDD0 /* Hanz2Piny.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43E9C351272BD52E002FDDD0 /* Hanz2Piny.cpp */; };
+		43E9C382272BDF91002FDDD0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E9C36B272BDF75002FDDD0 /* libsqlite3.tbd */; };
+		43E9C385272BE0F3002FDDD0 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E9C384272BE0E6002FDDD0 /* libiconv.tbd */; };
 		43FB4EA1272B9D5C00554862 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 43FB4E88272B959A00554862 /* zip.c */; };
 		43FB5B0B272BA14700554862 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 43FB5B0A272BA14700554862 /* data */; };
 		945C4F53195AF17F00DBBF61 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945C4F52195AF17F00DBBF61 /* Default-568h@2x.png */; };
@@ -308,6 +311,10 @@
 		43D7BF9F272A940B0015D6C9 /* convert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = convert.h; path = ../common/convert.h; sourceTree = "<group>"; };
 		43D7BFA0272A940B0015D6C9 /* Cifa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cifa.h; path = ../common/Cifa.h; sourceTree = "<group>"; };
 		43D7BFA1272A940B0015D6C9 /* ConsoleControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConsoleControl.h; path = ../common/ConsoleControl.h; sourceTree = "<group>"; };
+		43E9C33B272BD52E002FDDD0 /* Hanz2Piny.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Hanz2Piny.h; path = ../others/Hanz2Piny.h; sourceTree = "<group>"; };
+		43E9C351272BD52E002FDDD0 /* Hanz2Piny.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Hanz2Piny.cpp; path = ../others/Hanz2Piny.cpp; sourceTree = "<group>"; };
+		43E9C36B272BDF75002FDDD0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		43E9C384272BE0E6002FDDD0 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		43FB4E88272B959A00554862 /* zip.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = zip.c; path = ../others/zip.c; sourceTree = "<group>"; };
 		43FB5B0A272BA14700554862 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../bin/data; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -338,6 +345,7 @@
 				FDB8BFC60E5A0F6A00980157 /* CoreGraphics.framework in Frameworks */,
 				F3A497AC2555F0BD00E92A8B /* CoreHaptics.framework in Frameworks */,
 				4348CB3D272AA524005F0D4F /* CoreGraphics.framework in Frameworks */,
+				43E9C382272BDF91002FDDD0 /* libsqlite3.tbd in Frameworks */,
 				FA8B4B97196703B400F8EB7C /* CoreMotion.framework in Frameworks */,
 				FAE0E9651BAF967F0098DFA4 /* GameController.framework in Frameworks */,
 				F3A497B02555F0FF00E92A8B /* Metal.framework in Frameworks */,
@@ -346,6 +354,7 @@
 				4348CB36272AA491005F0D4F /* libSDL2_image.a in Frameworks */,
 				4348CB3B272AA4F6005F0D4F /* CoreServices.framework in Frameworks */,
 				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
+				43E9C385272BE0F3002FDDD0 /* libiconv.tbd in Frameworks */,
 				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
 				4348CB37272AA497005F0D4F /* libSDL2_mixer.a in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -378,6 +387,8 @@
 		29B97315FDCFA39411CA2CEA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				43E9C351272BD52E002FDDD0 /* Hanz2Piny.cpp */,
+				43E9C33B272BD52E002FDDD0 /* Hanz2Piny.h */,
 				43FB4E88272B959A00554862 /* zip.c */,
 				4348CB5A272B8D84005F0D4F /* zip.h */,
 				43D7BF9B272A940B0015D6C9 /* Cifa.cpp */,
@@ -520,6 +531,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43E9C384272BE0E6002FDDD0 /* libiconv.tbd */,
+				43E9C36B272BDF75002FDDD0 /* libsqlite3.tbd */,
 				4348CB3F272AA575005F0D4F /* ImageIO.framework */,
 				4348CB3A272AA4F6005F0D4F /* CoreServices.framework */,
 				43D7BDFC272A76B80015D6C9 /* CoreBluetooth.framework */,
@@ -755,6 +768,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E9C353272BD558002FDDD0 /* Hanz2Piny.cpp in Sources */,
 				43FB4EA1272B9D5C00554862 /* zip.c in Sources */,
 				43D7BF50272A8E8C0015D6C9 /* ParticleSystem.cpp in Sources */,
 				43D7BF3B272A8E8C0015D6C9 /* Font.cpp in Sources */,

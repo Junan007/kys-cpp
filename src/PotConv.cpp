@@ -1,5 +1,6 @@
 #include "PotConv.h"
 #include "SDL2/SDL.h"
+#include "iconv.h"
 
 PotConv::PotConv()
 {
@@ -9,8 +10,8 @@ PotConv::~PotConv()
 {
     for (auto& cd : cds_)
     {
-//        iconv_close(cd.second);
-        SDL_iconv_close(cd.second);
+        iconv_close(cd.second);
+//        SDL_iconv_close(cd.second);
         
     }
 }
@@ -18,8 +19,8 @@ PotConv::~PotConv()
 std::string PotConv::conv(const std::string& src, const char* from, const char* to)
 {
     return src;
-//    iconv_t cd = createcd(from, to);
-    SDL_iconv_t cd = createcd(from, to);
+    iconv_t cd = createcd(from, to);
+//    SDL_iconv_t cd = createcd(from, to);
     if (cd == nullptr)
     {
         return "";
@@ -32,8 +33,8 @@ std::string PotConv::conv(const std::string& src, const char* from, const char* 
     memcpy(in, src.c_str(), inlen);
     memset(out, 0, outlen + 1);
     char *pin = in, *pout = out;
-//    if (iconv(cd, &pin, &inlen, &pout, &outlen) == -1)
-    if (SDL_iconv(cd, (const char **)&pin, &inlen, &pout, &outlen) == -1)
+    if (iconv(cd, &pin, &inlen, &pout, &outlen) == -1)
+//    if (SDL_iconv(cd, (const char **)&pin, &inlen, &pout, &outlen) == -1)
     {
         out[0] = '\0';
     }
@@ -59,13 +60,13 @@ std::string PotConv::to_read(const std::string& src)
 
 PotConv PotConv::potconv_;
 
-SDL_iconv_t PotConv::createcd(const char* from, const char* to)
+iconv_t PotConv::createcd(const char* from, const char* to)
 {
     std::string cds = std::string(from) + std::string(to);
     if (potconv_.cds_.count(cds) == 0)
     {
-        SDL_iconv_t cd;
-        cd = SDL_iconv_open(to, from);
+        iconv_t cd;
+        cd = iconv_open(to, from);
         potconv_.cds_[cds] = cd;
         return cd;
     }

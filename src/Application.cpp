@@ -26,11 +26,11 @@ int Application::run()
 
     config();
 
-    // auto s = std::make_shared<TitleScene>();    //开始界面
-    // s->run();
-
-    auto s = std::make_shared<TestScene>();
+    auto s = std::make_shared<TitleScene>();    //开始界面
     s->run();
+
+//     auto s = std::make_shared<TestScene>();
+//     s->run();
 
     return 0;
 }

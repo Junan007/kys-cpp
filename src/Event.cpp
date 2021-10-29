@@ -121,7 +121,7 @@ bool Event::callEvent(int event_id, RunNode* subscene, int supmap_id, int item_i
     if (use_script_)
     {
         auto script = fmt::format("./data/script/oldevent/oldevent_{}.lua", event_id);
-        ret = Script::getInstance()->runScript(script) == 0;
+        // ret = Script::getInstance()->runScript(script) == 0;
     }
     else
     {

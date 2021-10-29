@@ -38,7 +38,7 @@ void UISystem::onPressedOK()
     }
     else if (title_->getResult() == 2)
     {
-        Script::getInstance()->runScript("./data/script/1.lua");
+        // Script::getInstance()->runScript("./data/script/1.lua");
     }
     else if (title_->getResult() == title_->getChildCount() - 1)
     {

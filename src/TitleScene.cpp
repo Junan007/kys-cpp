@@ -26,12 +26,12 @@ TitleScene::TitleScene()
 {
     full_window_ = 1;
     menu_ = std::make_shared<Menu>();
-    menu_->setPosition(400, 250);
+    menu_->setPosition(300, 150);
     menu_->addChild<Button>(20, 0)->setTexture("title", 3, 23, 23);
     menu_->addChild<Button>(20, 50)->setTexture("title", 4, 24, 24);
     menu_->addChild<Button>(20, 100)->setTexture("title", 6, 26, 26);
     menu_load_ = std::make_shared<UISave>();
-    menu_load_->setPosition(500, 300);
+    menu_load_->setPosition(100, 100);
     render_message_ = 1;
 }
 
@@ -63,7 +63,6 @@ void TitleScene::dealEvent(BP_Event& e)
     if (r == 0)
     {
         Save::getInstance()->load(0);
-        //Script::getInstance()->runScript("./data/script/0.lua");
         std::string name = "";
         auto input = std::make_shared<InputBox>("請輸入姓名：", 30);
         input->setInputPosition(350, 300);
@@ -90,8 +89,6 @@ void TitleScene::dealEvent(BP_Event& e)
     {
         if (menu_load_->run() >= 0)
         {
-            //Save::getInstance()->getRole(0)->MagicLevel[0] = 900;    //测试用
-            //Script::getInstance()->runScript("./data/script/0.lua");
             MainScene::getInstance()->run();
         }
     }
