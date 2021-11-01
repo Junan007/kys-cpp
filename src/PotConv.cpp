@@ -1,5 +1,4 @@
 #include "PotConv.h"
-#include "SDL2/SDL.h"
 #include "iconv.h"
 
 PotConv::PotConv()
@@ -11,16 +10,12 @@ PotConv::~PotConv()
     for (auto& cd : cds_)
     {
         iconv_close(cd.second);
-//        SDL_iconv_close(cd.second);
-        
     }
 }
 
 std::string PotConv::conv(const std::string& src, const char* from, const char* to)
 {
-    return src;
     iconv_t cd = createcd(from, to);
-//    SDL_iconv_t cd = createcd(from, to);
     if (cd == nullptr)
     {
         return "";
@@ -34,7 +29,6 @@ std::string PotConv::conv(const std::string& src, const char* from, const char* 
     memset(out, 0, outlen + 1);
     char *pin = in, *pout = out;
     if (iconv(cd, &pin, &inlen, &pout, &outlen) == -1)
-//    if (SDL_iconv(cd, (const char **)&pin, &inlen, &pout, &outlen) == -1)
     {
         out[0] = '\0';
     }

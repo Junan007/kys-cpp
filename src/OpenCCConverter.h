@@ -1,5 +1,5 @@
 #pragma once
-//#include "opencc/opencc.h"
+#include "opencc/opencc.h"
 #include <string>
 
 class OpenCCConverter
@@ -17,5 +17,5 @@ public:
     }
 
 private:
-//    opencc_t cc = nullptr;
+//   opencc_t cc = nullptr;
 };

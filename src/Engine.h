@@ -129,8 +129,8 @@ public:
     void showLogo() { renderCopy(logo_, nullptr, nullptr); }
     void renderPresent() { SDL_RenderPresent(renderer_); /*renderClear();*/ }
     void renderClear() { SDL_RenderClear(renderer_); }
-    void setTextureAlphaMod(BP_Texture* t, uint8_t alpha) { SDL_SetTextureAlphaMod(t, alpha); }
-    void queryTexture(BP_Texture* t, int* w, int* h) { SDL_QueryTexture(t, nullptr, nullptr, w, h); }
+    void setTextureAlphaMod(BP_Texture* t, uint8_t alpha) { if (t) SDL_SetTextureAlphaMod(t, alpha); }
+    void queryTexture(BP_Texture* t, int* w, int* h) { if (t) SDL_QueryTexture(t, nullptr, nullptr, w, h); }
     void setRenderTarget(BP_Texture* t) { SDL_SetRenderTarget(renderer_, t); }
     void resetRenderTarget() { setRenderTarget(nullptr); }
     void createWindow() {}

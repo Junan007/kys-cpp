@@ -32,7 +32,7 @@ TitleScene::TitleScene()
     menu_->addChild<Button>(20, 100)->setTexture("title", 6, 26, 26);
     menu_load_ = std::make_shared<UISave>();
     menu_load_->setPosition(100, 100);
-    render_message_ = 1;
+//    render_message_ = 1;
 }
 
 TitleScene::~TitleScene()
@@ -102,5 +102,4 @@ void TitleScene::onEntrance()
 {
     Engine::getInstance()->playVideo("./data/movie/1.mp4");
     Audio::getInstance()->playMusic(16);
-    printf("TitleScene::onEntrance() finished.\n");
 }

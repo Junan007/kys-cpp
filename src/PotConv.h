@@ -1,7 +1,6 @@
 #pragma once
 
 #include "iconv.h"
-//#include "SDL2/SDL.h"
 #include <algorithm>
 #include <cstring>
 #include <map>
@@ -38,8 +37,6 @@ public:
 
 private:
     std::map<std::string, iconv_t> cds_;
-//    std::map<std::string, SDL_iconv_t> cds_;
     static PotConv potconv_;
     static iconv_t createcd(const char* from, const char* to);
-//    static SDL_iconv_t createcd(const char* from, const char* to);
 };
