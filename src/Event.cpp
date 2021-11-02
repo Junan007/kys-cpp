@@ -15,7 +15,7 @@
 #include "UIShop.h"
 #include "convert.h"
 
-#include <fstream>
+//#include <fstream>
 
 Event::Event()
 {
@@ -52,19 +52,18 @@ bool Event::loadEventData()
         }
     }
     
-    std::ofstream file1("talk.txt"); //, std::ios::out | std::ios::trunc, 0);
-        
+    // std::ofstream file1("talk.txt");
     for (int i = 0; i < length.size(); i++)
     {
         std::string str = convert::replaceAllSubString(PotConv::cp950toutf8(talk.data() + offset[i]), "*", "");
         str = convert::replaceAllSubString(str, "　", "");
 
         talk_contents_.push_back(str);
-        printf("talk %d: %s\n", i, str.c_str());
+        // printf("talk %d: %s\n", i, str.c_str());
         
-        file1 << i << ":" << str << std::endl;
+        // file1 << i << ":" << str << std::endl;
     }
-    file1.close();
+//    file1.close();
     
     //读取事件，全部转为整型
     auto kdef = GrpIdxFile::getIdxContent("./data/resource/kdef.idx", "./data/resource/kdef.grp", &offset, &length);

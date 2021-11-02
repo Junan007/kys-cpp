@@ -18,6 +18,7 @@
 		4348CB3B272AA4F6005F0D4F /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4348CB3A272AA4F6005F0D4F /* CoreServices.framework */; };
 		4348CB3D272AA524005F0D4F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB8BFC50E5A0F6A00980157 /* CoreGraphics.framework */; };
 		4348CB40272AA576005F0D4F /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4348CB3F272AA575005F0D4F /* ImageIO.framework */; };
+		43CA72E12730E4350025E3F7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43CA72E02730E4350025E3F7 /* Launch Screen.storyboard */; };
 		43D7BDFD272A76B80015D6C9 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D7BDFC272A76B80015D6C9 /* CoreBluetooth.framework */; };
 		43D7BF22272A8E8C0015D6C9 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43D7BEBC272A8E890015D6C9 /* Application.cpp */; };
 		43D7BF23272A8E8C0015D6C9 /* GrpIdxFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43D7BEBD272A8E890015D6C9 /* GrpIdxFile.cpp */; };
@@ -188,6 +189,7 @@
 		4348CB3A272AA4F6005F0D4F /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		4348CB3F272AA575005F0D4F /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		4348CB5A272B8D84005F0D4F /* zip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = zip.h; path = ../others/zip.h; sourceTree = "<group>"; };
+		43CA72E02730E4350025E3F7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		43D7BDFC272A76B80015D6C9 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		43D7BE01272A82F90015D6C9 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = "../3rd/SDL2-2.0.12/Xcode-iOS/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
 		43D7BE23272A83090015D6C9 /* SDL_image.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL_image.xcodeproj; path = "../3rd/SDL2_image-2.0.5/Xcode-iOS/SDL_image.xcodeproj"; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				43CA72E02730E4350025E3F7 /* Launch Screen.storyboard */,
 				945C4F52195AF17F00DBBF61 /* Default-568h@2x.png */,
 				29B97315FDCFA39411CA2CEA /* Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -757,6 +760,7 @@
 				FD77A07D0E26BD8C00F39101 /* Icon.png in Resources */,
 				FD77A07F0E26BDA900F39101 /* Default.png in Resources */,
 				43FB5B0B272BA14700554862 /* data in Resources */,
+				43CA72E12730E4350025E3F7 /* Launch Screen.storyboard in Resources */,
 				945C4F53195AF17F00DBBF61 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,8 +10,9 @@ Audio::Audio()
         fmt::print("Init Bass fault!\n");
     }
 #else
-    Mix_Init(MIX_INIT_MP3);
-    if (Mix_OpenAudio(22500, MIX_DEFAULT_FORMAT, 2, 4096) == -1)
+    Mix_Init(MIX_INIT_MP3 | MIX_INIT_OGG);
+//    if (Mix_OpenAudio(22500, MIX_DEFAULT_FORMAT, 2, 4096) == -1)
+    if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096) == -1)
     {
         fmt::print("Mix_OpenAudio: {}\n", Mix_GetError());
     }
@@ -61,28 +62,28 @@ void Audio::init()
 #endif
     for (int i = 0; i < 100; i++)
     {
-        music_path = fmt::format("./data/music/{}.mid", i);
-        if (File::fileExist(music_path))
-        {
-#ifndef USE_SDL_MIXER_AUDIO
-            auto m = BASS_MIDI_StreamCreateFile(false, music_path.c_str(), 0, 0, 0, 0);
-            BASS_MIDI_StreamSetFonts(m, &mid_sound_font_, 1);
-#else
-            auto m = Mix_LoadMUS(music_path.c_str());
-#endif
-            music_.push_back(m);
-        }
-        else
-        {
-            music_path = fmt::format("./data/music/{}.mp3", i);
+        // TODO: remove mid support.
+//        music_path = fmt::format("./data/music/{}.mid", i);
+//        if (File::fileExist(music_path))
+//        {
+//#ifndef USE_SDL_MIXER_AUDIO
+//            auto m = BASS_MIDI_StreamCreateFile(false, music_path.c_str(), 0, 0, 0, 0);
+//            BASS_MIDI_StreamSetFonts(m, &mid_sound_font_, 1);
+//#else
+//            auto m = Mix_LoadMUS(music_path.c_str());
+//#endif
+//            music_.push_back(m);
+//        }
+//        else
+//        {
+            music_path = fmt::format("./data/music/{}.ogg", i);
 #ifndef USE_SDL_MIXER_AUDIO
             auto m = BASS_StreamCreateFile(false, music_path.c_str(), 0, 0, flag);
 #else
             auto m = Mix_LoadMUS(music_path.c_str());
 #endif
             music_.push_back(m);
-        }
-        //int error_t = BASS_ErrorGetCode();
+//        }
 
         asound_path = fmt::format("./data/sound/atk{:02}.wav", i);
 #ifndef USE_SDL_MIXER_AUDIO

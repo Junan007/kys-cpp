@@ -72,7 +72,7 @@ public:
 private:
     BP_Window* window_ = nullptr;
     BP_Renderer* renderer_ = nullptr;
-    BP_Texture *tex_ = nullptr, *tex2_ = nullptr, *logo_ = nullptr;
+    BP_Texture *tex_ = nullptr, *tex2_ = nullptr;
     BP_Rect rect_;
     BP_Texture* testTexture(BP_Texture* tex) { return tex ? tex : this->tex_; }
     bool full_screen_ = false;
@@ -126,7 +126,6 @@ public:
     void updateARGBTexture(BP_Texture* t, uint8_t* buffer, int pitch);
     void renderCopy(BP_Texture* t = nullptr);
     void renderCopy(BP_Texture* t, BP_Rect* rect1, double angle);
-    void showLogo() { renderCopy(logo_, nullptr, nullptr); }
     void renderPresent() { SDL_RenderPresent(renderer_); /*renderClear();*/ }
     void renderClear() { SDL_RenderClear(renderer_); }
     void setTextureAlphaMod(BP_Texture* t, uint8_t alpha) { if (t) SDL_SetTextureAlphaMod(t, alpha); }

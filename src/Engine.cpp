@@ -141,9 +141,22 @@ int Engine::init(void* handle)
     {
         return -1;
     }
+    
+    SDL_DisplayMode dm;
+    SDL_GetCurrentDisplayMode(0, &dm);
+    printf("dm.w: %d, dm.h: %d\n", dm.w, dm.h);
 
     window_ = SDL_CreateWindow(title_.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-        start_w_, start_h_, SDL_WINDOW_RESIZABLE);
+        start_w_, start_h_, /*SDL_WINDOW_RESIZABLE |*/ SDL_WINDOW_ALLOW_HIGHDPI | SDL_WINDOW_FULLSCREEN_DESKTOP);
+    
+    int w1, h1;
+    SDL_GL_GetDrawableSize(window_, &w1, &h1);
+    printf("GLDrawableSize: %d, %d\n", w1, h1);
+    
+    SDL_GetWindowSize(window_, &w1, &h1);
+    printf("SDL_GetWindowSize: %d, %d\n", w1, h1);
+    
+    SDL_SetHint(SDL_HINT_ORIENTATIONS, "LandscapeLeft LandscapeRight");
 
     SDL_ShowWindow(window_);
     SDL_RaiseWindow(window_);
@@ -158,8 +171,6 @@ int Engine::init(void* handle)
     SDL_EventState(SDL_FINGERMOTION, SDL_DISABLE);
 
     rect_ = { 0, 0, start_w_, start_h_ };
-    logo_ = loadImage("./data/logo.jpg");
-    showLogo();
     renderPresent();
     TTF_Init();
 
